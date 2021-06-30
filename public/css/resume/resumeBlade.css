@@ -1,0 +1,913 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Mobtserrat', sans-serif;
+}
+
+/* =================== start master layout ============================================================================================= */
+/* ================================================================================================================ */
+
+body {
+    /* background-color: #6AC36A; */
+    background-color: #eee0e5;
+    margin          : 0;
+    font-size       : 28px;
+    font-family     : Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background : #E94242;
+    padding    : 10px 40px 10px 70px;
+    border     : 1px solid #000;
+    border-left: none;
+    border-left: none;
+    color      : white;
+}
+
+nav ul {
+    display        : flex;
+    list-style     : none;
+    flex-wrap      : wrap;
+    align-items    : center;
+    justify-content: center;
+}
+
+nav ul .logo-text {
+    flex       : 1;
+    font-size  : 30px;
+    font-weight: 700;
+}
+
+nav ul .item {
+    padding: 0 25px;
+    display: inline-flex;
+    cursor : pointer;
+}
+
+nav ul .item .name {
+    padding   : 10px;
+    text-align: center;
+}
+
+nav ul .item .name a {
+    text-decoration: none;
+    font-size      : 14px;
+    color          : white;
+}
+
+nav ul .item .name:hover {
+    background: #6369ED;
+}
+
+
+
+/* ============================== search ============================= */
+nav ul .search-icon {
+    height       : 40px;
+    width        : 240px;
+    display      : flex;
+    background   : #f2f2f2;
+    border-radius: 5px;
+}
+
+nav ul .search-icon input {
+    height       : 100%;
+    width        : 200px;
+    border       : none;
+    outline      : none;
+    padding      : 0 10px;
+    color        : #000;
+    font-size    : 16px;
+    border-radius: 5px 0 0 5px;
+}
+
+nav ul .search-icon .icon {
+    height       : 100%;
+    width        : 49px;
+    line-height  : 40px;
+    text-align   : center;
+    border       : 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    cursor       : pointer;
+}
+
+nav ul .search-icon .icon:hover {
+    background: #6e6e6e;
+}
+
+nav ul .search-icon .icon span {
+    color    : #222222;
+    font-size: 28px;
+}
+
+/*======================== noti and porfile dropdown ========================*/
+nav ul .item .notification,
+.profile {
+    position  : relative;
+    padding   : 10px;
+    text-align: center;
+}
+
+nav ul .item .notification a,
+.profile a {
+    text-decoration: none;
+    font-size      : 14px;
+    color          : white;
+}
+
+nav ul .item .notification:hover,
+.profile:hover {
+    background: #6369ED;
+}
+
+/* ================== noti ================= */
+nav ul .item .notification .notiDetail {
+    display      : none;
+    position     : absolute;
+    background   : #ffff;
+    color        : #000;
+    width        : 350px;
+    top          : 80px;
+    right        : 0;
+    border       : 1px solid;
+    border-radius: 3px;
+    box-shadow   : 10px 10px 30px rgba(0, 0, 0, 0.125);
+    z-index      : 2;
+}
+
+nav ul .item .notification .notiDetail::before {
+    content     : "";
+    position    : absolute;
+    top         : -20px;
+    right       : 15px;
+    border      : 10px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+nav ul .item .notification .notiDetail .notiTitle {
+    text-align: left;
+    font-size : 18px;
+    margin    : 10px;
+}
+
+nav ul .item .notification .notiDetail .notiItem .notiData .notiDataDetail {
+    text-align: left;
+    font-size : 18px;
+    margin    : 10px;
+    padding   : 10px;
+    font-size : 16px;
+    background: rgb(228, 228, 228);
+}
+
+/* ================== profile ================= */
+nav ul .item .profile .profDetail {
+    display      : none;
+    position     : absolute;
+    background   : #ffff;
+    color        : #000;
+    width        : 250px;
+    height       : 250px;
+    top          : 80px;
+    right        : 0;
+    border       : 1px solid;
+    border-radius: 3px;
+    box-shadow   : 10px 10px 30px rgba(0, 0, 0, 0.125);
+    z-index      : 2;
+}
+
+nav ul .item .profile .profDetail::before {
+    content     : "";
+    position    : absolute;
+    top         : -20px;
+    right       : 15px;
+    border      : 10px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+nav ul .item .profile .profDetail .profItem button {
+    text-align   : left;
+    font-size    : 16px;
+    width        : 200px;
+    /* height    : 100px; */
+    margin       : 5px;
+    padding      : 10px;
+    background   : rgb(228, 228, 228);
+    cursor       : pointer;
+}
+
+/*======================== reponsive ====================*/
+@media screen and (max-width: 1052px) {
+    nav {
+        padding: 10px 40px 10px 0px;
+    }
+
+    nav ul .logo-text {
+        display: none;
+    }
+
+    nav ul .item {
+        flex: 4;
+    }
+}
+
+/* =================== end master layout ============================================================================================= */
+/* ================================================================================================================ */
+
+/*======================== layout ========================*/
+.history {
+    width        : 900px;
+    height       : 1550px;
+    margin       : 10px 300px;
+    background   : #ffff;
+    border-radius: 5px;
+    /* border    : 1px solid red; */
+}
+
+/*======================== history title ========================*/
+.history .historyTitle {
+    background-color: #E94242;
+}
+
+.history .historyTitle p {
+    color     : #ffff;
+    text-align: center;
+    font-size : 25px;
+}
+
+.history .myHistory p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/* ====================== photo resume ================================== */
+.history .myHistory .resumeImage .selectPhoto {
+    position: absolute;
+    width   : 140px;
+    height  : 160px;
+    top     : 127px;
+    left    : 690px;
+    padding : 3px;
+    border  : 2px dashed #555;
+    cursor  : pointer;
+}
+
+.history .myHistory .resumeImage .selectPhoto input {
+    display: none;
+}
+
+.history .myHistory .resumeImage .selectPhoto label {
+    display      : block;
+    width        : 100%;
+    height       : 20px;
+    line-height  : 20px;
+    text-align   : center;
+    background   : #333;
+    color        : #fff;
+    font-size    : 12px;
+    font-family  : "Open Sans", sans-serif;
+    font-weight  : 600;
+    border-radius: 10px;
+    cursor       : pointer;
+}
+
+.history .myHistory .resumeImage .selectPhoto img {
+    width     : 100%;
+    /* display   : none; */
+    margin-top: 3px;
+}
+
+/*======================== ประวัติส่วนตัว ========================*/
+.history .myHistory p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/*======================== ตำนำหน้า ========================*/
+.myHistory .checkbox {
+    margin-top : 130px;
+    margin-left: 100px;
+}
+
+.myHistory .checkbox label {
+    font-size: 16px;
+}
+
+/*======================== ชื่อ นามสกุล ========================*/
+.myHistory .firstNameInput {
+    position: absolute;
+    left    : 620px;
+    top     : 285px;
+}
+
+.myHistory .lastNameInput {
+    position: absolute;
+    right   : 430px;
+    top     : 285px;
+}
+
+.myHistory .firstNameInput input,
+.lastNameInput input {
+    padding: 5px;
+}
+
+.myHistory .firstNameInput label,
+.lastNameInput label {
+    font-size: 16px;
+}
+
+/*======================== อีเมล ========================*/
+.myHistory .emailInput {
+    position: absolute;
+    left    : 400px;
+    top     : 325px;
+}
+
+.myHistory .emailInput input {
+    padding: 5px;
+    width  : 200px;
+}
+
+.myHistory .emailInput label {
+    font-size: 16px;
+}
+
+/*======================== เบอร์ติดต่อ ========================*/
+.myHistory .phoneNumberInput {
+    position: absolute;
+    left    : 670px;
+    top     : 325px;
+}
+
+.myHistory .phoneNumberInput input {
+    padding: 5px;
+}
+
+.myHistory .phoneNumberInput label {
+    font-size: 16px;
+}
+
+/*======================== วันเกิด ========================*/
+.myHistory .birthday {
+    position: absolute;
+    left    : 400px;
+    top     : 365px;
+}
+
+.myHistory .birthday label {
+    font-size: 16px;
+}
+
+/*======================== อายุ ========================*/
+.myHistory .yearOld {
+    position: absolute;
+    left    : 620px;
+    top     : 365px;
+}
+
+.myHistory .yearOld label {
+    font-size: 16px;
+}
+
+.myHistory .yearOld .selectYears {
+    padding: 5px;
+}
+
+/* ========================== รูป ===================== */
+.myHistory .img {
+    position: absolute;
+    left    : 750px;
+    top     : 260px;
+}
+
+.myHistory .img input {
+    padding       : 5px;
+    /* margin-left: px; */
+}
+
+.myHistory .img label {
+    font-size: 16px;
+}
+
+/* ============================================================================================================== */
+/* ============================================================================================================== */
+/*======================== ประวัติการศึกษา ========================*/
+.history .educationsHistory p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/*======================== มหาลัย คณะ  ========================*/
+.educationsHistory .universityInput {
+    position: absolute;
+    left    : 400px;
+    top     : 480px;
+}
+
+.educationsHistory .facultyInput {
+    position: absolute;
+    right   : 500px;
+    top     : 480px;
+}
+
+.educationsHistory .universityInput input {
+    width: 200px;
+}
+
+.educationsHistory .universityInput input,
+.facultyInput input {
+    padding: 5px;
+}
+
+.educationsHistory .universityInput label,
+.facultyInput label {
+    font-size: 16px;
+}
+
+/*======================== สาขา ========================*/
+.educationsHistory .branchInput {
+    position: absolute;
+    left    : 400px;
+    top     : 520px;
+}
+
+.educationsHistory .branchInput input {
+    padding: 5px;
+}
+
+.educationsHistory .branchInput label {
+    font-size: 16px;
+}
+
+/*======================== GPA ========================*/
+.educationsHistory .gpaInput {
+    position: absolute;
+    left    : 650px;
+    top     : 520px;
+}
+
+.educationsHistory .gpaInput input {
+    padding: 5px;
+}
+
+.educationsHistory .gpaInput label {
+    font-size: 16px;
+}
+
+/*======================== วุฒิการศึกษา ========================*/
+.educationsHistory .checkbox2 {
+    top        : 560px;
+    margin-left: 100px;
+    position   : absolute;
+}
+
+.educationsHistory .checkbox2 label {
+    font-size: 16px;
+}
+
+/* ============================================================================================================== */
+/* ============================================================================================================== */
+/*======================== ประสบการณ์การทำงาน ========================*/
+.history .myExperience p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/*======================== ประสบการณ์ที่เคยทำงานกับบริษัท ========================*/
+.myExperience .usedToWorkInput {
+    position: absolute;
+    left    : 400px;
+    top     : 670px;
+}
+
+.myExperience .usedToWorkInput input {
+    padding: 5px;
+    width  : 300px;
+}
+
+.myExperience .usedToWorkInput label {
+    font-size: 16px;
+}
+
+/* ========================== ภาษาที่ถนัด ================================ */
+.myExperience .dominantLanguageInput {
+    position: absolute;
+    left    : 400px;
+    top     : 720px;
+}
+
+.myExperience .dominantLanguageInput textarea {
+    padding    : 5px;
+    margin-left: 80px;
+}
+
+.myExperience .dominantLanguageInput label {
+    font-size: 16px;
+}
+
+/* ========================== ภาษาที่เคยเรียนรู้ ================================ */
+.myExperience .LanguageLearnedInput {
+    position: absolute;
+    left    : 400px;
+    top     : 830px;
+}
+
+.myExperience .LanguageLearnedInput textarea {
+    padding    : 5px;
+    margin-left: 47px;
+}
+
+.myExperience .LanguageLearnedInput label {
+    font-size: 16px;
+}
+
+/* ========================== ความสามารถพิเศษ ================================ */
+.myExperience .charismaInput {
+    position: absolute;
+    left    : 400px;
+    top     : 940px;
+}
+
+.myExperience .charismaInput textarea {
+    padding    : 5px;
+    margin-left: 35px;
+}
+
+.myExperience .charismaInput label {
+    font-size: 16px;
+}
+
+/* ========================== ผบงาน ================================ */
+.myExperience .certi {
+    position: absolute;
+    left    : 400px;
+    top     : 1050px;
+}
+
+.myExperience .certi input {
+    padding    : 5px;
+    margin-left: 35px;
+    /* width   : 2000px; */
+    /* height  : 200px; */
+}
+
+.myExperience .certi label {
+    font-size: 16px;
+}
+
+/* ============================================================================================================== */
+/* ============================================================================================================== */
+/*======================== ภูมิลำเนา ========================*/
+.history .domicile p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/*======================== หมู่บ้าน บ้านเลขที่ ========================*/
+.domicile .nameVillage {
+    position: absolute;
+    left    : 400px;
+    top     : 1150px;
+}
+
+.domicile .homeNumber {
+    position: absolute;
+    right   : 550px;
+    top     : 1150px;
+}
+
+.domicile .nameVillage input {
+    margin-left: 21px;
+}
+
+.domicile .nameVillage input,
+.homeNumber input {
+    padding: 5px;
+}
+
+.domicile .nameVillage label,
+.homeNumber label {
+    font-size: 16px;
+}
+
+/*======================== ซอย ========================*/
+.domicile .alley {
+    position: absolute;
+    left    : 400px;
+    top     : 1190px;
+}
+
+.domicile .alley input {
+    padding    : 5px;
+    margin-left: 0px;
+}
+
+.domicile .alley label {
+    font-size: 16px;
+}
+
+/*======================== ถนน ========================*/
+.domicile .road {
+    position: absolute;
+    right   : 550px;
+    top     : 1190px;
+}
+
+.domicile .road input {
+    padding: 5px;
+}
+
+.domicile .road label {
+    font-size: 16px;
+}
+
+/*======================== ตำบล ========================*/
+.domicile .district {
+    position: absolute;
+    left    : 400px;
+    top     : 1230px;
+}
+
+.domicile .district input {
+    padding    : 5px;
+    margin-left: 32px;
+}
+
+.domicile .district label {
+    font-size: 16px;
+}
+
+/*======================== อำเภอ ========================*/
+.domicile .canton {
+    position: absolute;
+    right   : 550px;
+    top     : 1230px;
+}
+
+.domicile .canton input {
+    padding: 5px;
+}
+
+.domicile .canton label {
+    font-size: 16px;
+}
+
+/*======================== จังหวัด ========================*/
+.domicile .province {
+    position: absolute;
+    left    : 400px;
+    top     : 1270px;
+}
+
+.domicile .province input {
+    padding    : 5px;
+    margin-left: 25px;
+}
+
+.domicile .province label {
+    font-size: 16px;
+}
+
+/*======================== รหัสไปรษณี ========================*/
+.domicile .postalCode {
+    position: absolute;
+    right   : 550px;
+    top     : 1270px;
+}
+
+.domicile .postalCode input {
+    padding: 5px;
+}
+
+.domicile .postalCode label {
+    font-size: 16px;
+}
+
+
+/* ============================================================================================================== */
+/* ============================================================================================================== */
+/*======================== ที่อยู่ปัจจุบัน ========================*/
+.history .myDomicile p {
+    margin   : 10px 100px;
+    font-size: 20px;
+}
+
+/*======================== หมู่บ้าน บ้านเลขที่ ========================*/
+.myDomicile .myNameVillage {
+    position: absolute;
+    left    : 400px;
+    top     : 1370px;
+}
+
+.myDomicile .myHomeNumber {
+    position: absolute;
+    right   : 550px;
+    top     : 1370px;
+}
+
+.myDomicile .myNameVillage input {
+    margin-left: 21px;
+}
+
+.myDomicile .myNameVillage input,
+.myHomeNumber input {
+    padding: 5px;
+}
+
+.myDomicile .myNameVillage label,
+.myHomeNumber label {
+    font-size: 16px;
+}
+
+/*======================== ซอย ========================*/
+.myDomicile .myAlley {
+    position: absolute;
+    left    : 400px;
+    top     : 1410px;
+}
+
+.myDomicile .myAlley input {
+    padding    : 5px;
+    margin-left: 0px;
+}
+
+.myDomicile .myAlley label {
+    font-size: 16px;
+}
+
+/*======================== ถนน ========================*/
+.myDomicile .myRoad {
+    position: absolute;
+    right   : 550px;
+    top     : 1410px;
+}
+
+.myDomicile .myRoad input {
+    padding: 5px;
+}
+
+.myDomicile .myRoad label {
+    font-size: 16px;
+}
+
+/*======================== ตำบล ========================*/
+.myDomicile .myDistrict {
+    position: absolute;
+    left    : 400px;
+    top     : 1450px;
+}
+
+.myDomicile .myDistrict input {
+    padding    : 5px;
+    margin-left: 32px;
+}
+
+.myDomicile .myDistrict label {
+    font-size: 16px;
+}
+
+/*======================== อำเภอ ========================*/
+.myDomicile .myCanton {
+    position: absolute;
+    right   : 550px;
+    top     : 1450px;
+}
+
+.myDomicile .myCanton input {
+    padding: 5px;
+}
+
+.myDomicile .myCanton label {
+    font-size: 16px;
+}
+
+/*======================== จังหวัด ========================*/
+.myDomicile .myProvince {
+    position: absolute;
+    left    : 400px;
+    top     : 1490px;
+}
+
+.myDomicile .myProvince input {
+    padding    : 5px;
+    margin-left: 25px;
+}
+
+.myDomicile .myProvince label {
+    font-size: 16px;
+}
+
+/*======================== รหัสไปรษณี ========================*/
+.myDomicile .myPostalCode {
+    position: absolute;
+    right   : 550px;
+    top     : 1490px;
+}
+
+.myDomicile .myPostalCode input {
+    padding: 5px;
+}
+
+.myDomicile .myPostalCode label {
+    font-size: 16px;
+}
+
+/*======================== edit btn ========================*/
+.editBtn {
+    width           : 100px;
+    background-color: rgb(231, 231, 54);
+    color           : black;
+    padding         : 14px 20px;
+    position        : absolute;
+    left            : 350px;
+    top             : 1580px;
+    border          : none;
+    border-radius   : 4px;
+    cursor          : pointer;
+}
+
+.editBtn:hover {
+    background-color: rgb(226, 226, 41);
+    ;
+}
+
+/* ======================== submit btn  ========================== */
+.submitBtn {
+    width           : 100px;
+    background-color: #4CAF50;
+    color           : white;
+    padding         : 14px 20px;
+    position        : absolute;
+    right           : 490px;
+    top             : 1580px;
+    border          : none;
+    border-radius   : 4px;
+    cursor          : pointer;
+}
+
+.submitBtn:hover {
+    background-color: #45a049;
+}
+
+/* ======================== back btn  ========================== */
+.backBtn {
+    width           : 100px;
+    background-color: #ee3860;
+    color           : white;
+    padding         : 14px 20px;
+    position        : absolute;
+    right           : 365px;
+    top             : 1580px;
+    border          : none;
+    border-radius   : 4px;
+    cursor          : pointer;
+}
+
+.backBtn:hover {
+    background-color: #ec2b55;
+}
+
+/* ======================= gototopbtn ================= */
+.gotoTopbtn {
+    position       : fixed;
+    width          : 50px;
+    height         : 50px;
+    background     : #27ae60;
+    bottom         : 40px;
+    right          : 50px;
+    text-decoration: none;
+    text-align     : center;
+    line-height    : 50px;
+    color          : #fff;
+    font-size      : 22px;
+}
+
+/* ======================= alert ================= */
+.alert_error {
+    background: rgb(240, 156, 77);
+    color     : white;
+    font-size : 16px;
+    position  : absolute;
+    left      : 10px;
+    top       : 100px;
+}
+
+.alert_error ul li {
+    list-style: none;
+    padding   : 10px;
+}
+
+.alert_error ul li::before {
+    content     : "";
+    position    : absolute;
+    top         : 10px;
+    right       : -20px;
+    border      : 10px solid;
+    border-color: transparent transparent transparent rgb(240, 156, 77);
+}
+
+.alert_success {
+    background: rgb(93, 245, 73);
+    color     : white;
+    font-size : 16px;
+}

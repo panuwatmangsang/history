@@ -1,0 +1,55 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Mobtserrat', sans-serif;
+}
+
+/*======================== layout ========================*/
+.mapTable {
+    width           : 25%;
+    height          : 650px;
+    float           : left;
+    padding         : 15px;
+    /* border       : 1px solid red; */
+    /* border-radius: 5px; */
+}
+
+.showMap {
+    width  : 75%;
+    height : 650px;
+    float  : left;
+    padding: 15px;
+    border : 1px solid red;
+}
+
+/*======================== map table ========================*/
+.map .mapTable .mapTitle {
+    border       : 1px solid black;
+    font-size    : 25px;
+    text-align   : center;
+    margin-top   : 30px;
+    background   : #E94242;
+    color        : white;
+    border-radius: 5px;
+}
+
+.map .mapTable .mapDetails {
+    border       : 1px solid black;
+    font-size    : 20px;
+    text-align   : center;
+    margin-top   : 2px;
+    background   : #ffff;
+    border-radius: 5px;
+}
+
+.map .mapTable .mapDetails a {
+    text-decoration: none;
+    color          : #000;
+}
+
+.map .mapTable .mapDetails:hover {
+    padding   : 0 80px;
+    background: #6369ED;
+    color     : white;
+}
